@@ -1,0 +1,78 @@
+# Ignore target directory
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Ignore Maven Wrapper files except the jar and properties
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# Ignore JAR, WAR, and EAR files
+*.jar
+*.war
+*.ear
+
+# Ignore compiled class files
+*.class
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Visual Studio Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+# Gradle files
+.gradle/
+build/
+
+# Logs
+*.log
+
+# System files
+Thumbs.db
+
+# Application files
+auth-service/src/main/resources/application.yml
+user-service/src/main/resources/application.yml
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+
+# Exclude .txt files
+*.txt
