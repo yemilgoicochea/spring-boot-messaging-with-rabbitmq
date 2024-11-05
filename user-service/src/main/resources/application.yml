@@ -1,0 +1,27 @@
+server:
+  port: 9091
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: rabbitExample
+      username: mongoadmin
+      password: secret
+      authentication-database: admin
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: secret
+  amqp:
+    deserialization:
+      trust:
+        all: true
+
+# env variables
+rabbitmq:
+  queue:
+    auth-to-user-register-queue: "${RABBITMQ_AUTH_TO_USER_REGISTER_QUEUE:auth_to_user_register_queue}"
+

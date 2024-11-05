@@ -1,0 +1,28 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: secret
+    url: jdbc:postgresql://localhost:5432/RabbitExampleDB
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: secret
+
+# env variables
+rabbitmq:
+  exchange:
+    auth-exchange: "${RABBITMQ_AUTH_EXCHANGE:auth.exchange}"
+  queue:
+    auth-to-user-register-queue: "${RABBITMQ_AUTH_TO_USER_REGISTER_QUEUE:auth_to_user_register_queue}"
+  routing-key:
+    auth-to-user-register-routing-key: "${RABBITMQ_AUTH_TO_USER_REGISTER_ROUTING_KEY:auth.to.user.register}"

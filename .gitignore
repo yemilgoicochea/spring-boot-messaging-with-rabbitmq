@@ -65,10 +65,6 @@ build/
 # System files
 Thumbs.db
 
-# Application files
-auth-service/src/main/resources/application.yml
-user-service/src/main/resources/application.yml
-
 # Gradle Wrapper
 gradle/wrapper/gradle-wrapper.properties
 gradlew
